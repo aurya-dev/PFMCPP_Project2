@@ -16,14 +16,14 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
  
+int
+float
+bool
+double
+char
+unsigned int
  
- 
- 
- 
- 
- 
- 
- 
+
  
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
@@ -56,10 +56,30 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable that uses the primitive type 'int', is named 'number', and has an initial value of '2'
-    
+    int bufferSize = 512;
+    int masterVolume = -20;
 
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    float opacityBackground = 0.5f;
+    float lowcutFilter = 1.2342f;
+    float resonance = 0.32f;
+
+    bool useFilter = true;
+    bool startWithLastProject = false;
+    bool halilIsTheBestDeveloper = true;
+
+    double reverbSpace = 0.000000000000234;
+    double feedbackAmount = 0.0000000345344;
+    double secondDelay = 1.000000000000002;
+
+    char filterBy = 'A'; 
+    char memoryBank = 'F';
+    char port = 'C';
+
+    unsigned int chunkSize = 63000;
+    unsigned int sampleNumber = 34;
+    unsigned int undoSteps = 15;
+
+    ignoreUnused(number, bufferSize, masterVolume, opacityBackground, lowcutFilter, resonance, useFilter, startWithLastProject, halilIsTheBestDeveloper, reverbSpace, feedbackAmount, secondDelay, filterBy, memoryBank, port, chunkSize, sampleNumber, undoSteps); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -75,42 +95,85 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+int getSampleAmount(char bank, bool filterUnused = false)
+{
+    ignoreUnused(bank, filterUnused);
+    return {};
+}
 
 /*
  2)
  */
+bool saveSampleBank(char targetBank)
+{
+    ignoreUnused(targetBank);
+    return {};
+}
 
 /*
  3)
  */
+ void openFileBrowser(char harddisc = 'c', bool homeDirectory = true)
+ {
+    ignoreUnused(harddisc, homeDirectory);
+ }
 
 /*
  4)
  */
+ void reverseSample(char bank, int sampleNumber)
+ {
+    ignoreUnused(bank, sampleNumber);
+ } 
 
 /*
  5)
  */
-
+void createTrack(char type = 'a', int amount = 1)
+{
+    ignoreUnused(type, amount);
+}
 /*
  6)
  */
+ float getResonance(int trackNumber) 
+ {
+    ignoreUnused(trackNumber);
+    return {};
+ }
 
 /*
  7)
  */
+char getCurrentBank(int trackNumber)
+{
+    ignoreUnused(trackNumber);
+    return {};
+}
 
 /*
  8)
  */
-
+void copyBankParameter(char source, char target)
+{
+    ignoreUnused(source, target);
+}
 /*
  9)
  */
+bool isTrackMuted(int trackNumber){
+    ignoreUnused(trackNumber);
+    return {};
+}
 
 /*
  10)
  */
+ int calculateArea(int hight = 10, int width = 10)
+ {
+    ignoreUnused(hight, width);
+    return {};
+ }
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -132,27 +195,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto amount = getSampleAmount('b');
     //2)
-    
+    auto result = saveSampleBank('c');
     //3)
-    
+    openFileBrowser();
     //4)
-    
+    reverseSample('a', 96);
     //5)
-    
+    createTrack('m');
     //6)
-    
+    auto reso = getResonance(2);
     //7)
-    
+    auto bank = getCurrentBank(7);
     //8)
-    
+    copyBankParameter('a', 'b');
     //9)
-    
+    auto muteStatus = isTrackMuted(4);
     //10)
+    auto myArea = calculateArea(1024, 768);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, amount, result, reso, bank, muteStatus, myArea);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
