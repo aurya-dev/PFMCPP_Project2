@@ -79,38 +79,7 @@ void variableDeclarations()
     unsigned int sampleNumber = 34;
     unsigned int undoSteps = 15;
 
-    
-
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-    ignoreUnused(bufferSize);
-    ignoreUnused(masterVolume);
-
-    ignoreUnused(opacityBackground);
-    ignoreUnused(lowcutFilter);
-    ignoreUnused(resonance);
-
-    ignoreUnused(useFilter);
-    ignoreUnused(startWithLastProject);
-    ignoreUnused(halilIsTheBestDeveloper);
-
-    ignoreUnused(reverbSpace);
-    ignoreUnused(feedbackAmount);
-    ignoreUnused(secondDelay);
-
-    ignoreUnused(filterBy);
-    ignoreUnused(memoryBank);
-    ignoreUnused(port);
-
-    ignoreUnused(chunkSize);
-    ignoreUnused(sampleNumber);
-    ignoreUnused(undoSteps);
-
-
-
-
-
-
+    ignoreUnused(number, bufferSize, masterVolume, opacityBackground, lowcutFilter, resonance, useFilter, startWithLastProject, halilIsTheBestDeveloper, reverbSpace, feedbackAmount, secondDelay, filterBy, memoryBank, port, chunkSize, sampleNumber, undoSteps); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -128,8 +97,8 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 int getSampleAmount(char bank, bool filterUnused = false)
 {
-  ignoreUnused(bank, filterUnused);
-  return {};
+    ignoreUnused(bank, filterUnused);
+    return {};
 }
 
 /*
@@ -137,8 +106,8 @@ int getSampleAmount(char bank, bool filterUnused = false)
  */
 bool saveSampleBank(char targetBank)
 {
-  ignoreUnused(targetBank);
-  return {};
+    ignoreUnused(targetBank);
+    return {};
 }
 
 /*
@@ -146,7 +115,7 @@ bool saveSampleBank(char targetBank)
  */
  void openFileBrowser(char harddisc = 'c', bool homeDirectory = true)
  {
-   ignoreUnused(harddisc, homeDirectory);
+    ignoreUnused(harddisc, homeDirectory);
  }
 
 /*
@@ -154,7 +123,7 @@ bool saveSampleBank(char targetBank)
  */
  void reverseSample(char bank, int sampleNumber)
  {
-   ignoreUnused(bank, sampleNumber);
+    ignoreUnused(bank, sampleNumber);
  } 
 
 /*
@@ -162,15 +131,15 @@ bool saveSampleBank(char targetBank)
  */
 void createTrack(char type = 'a', int amount = 1)
 {
-  ignoreUnused(type, amount);
+    ignoreUnused(type, amount);
 }
 /*
  6)
  */
  float getResonance(int trackNumber) 
  {
-   ignoreUnused(trackNumber);
-   return {};
+    ignoreUnused(trackNumber);
+    return {};
  }
 
 /*
@@ -178,8 +147,8 @@ void createTrack(char type = 'a', int amount = 1)
  */
 char getCurrentBank(int trackNumber)
 {
-  ignoreUnused(trackNumber);
-  return {};
+    ignoreUnused(trackNumber);
+    return {};
 }
 
 /*
@@ -187,14 +156,14 @@ char getCurrentBank(int trackNumber)
  */
 void copyBankParameter(char source, char target)
 {
-  ignoreUnused(source, target);
+    ignoreUnused(source, target);
 }
 /*
  9)
  */
 bool isTrackMuted(int trackNumber){
-  ignoreUnused(trackNumber);
-  return {};
+    ignoreUnused(trackNumber);
+    return {};
 }
 
 /*
@@ -202,8 +171,8 @@ bool isTrackMuted(int trackNumber){
  */
  int calculateArea(int hight = 10, int width = 10)
  {
-   ignoreUnused(hight, width);
-   return {};
+    ignoreUnused(hight, width);
+    return {};
  }
 
 /*
